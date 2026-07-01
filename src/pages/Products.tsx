@@ -2,54 +2,58 @@ import { useState } from 'react'
 
 const categories = ['Semua', 'Peralatan Masak', 'Meja & Prep', 'Pendingin', 'Rak & Storage', 'Exhaust & Ventilasi']
 
+const img1 = '/pemasangan-kitchen-custom.png'
+const img2 = '/pemasangan-kitchen-sesuai-request.jpeg'
+const img3 = '/pemasangan-kitchen-sesuai-ruangan.png'
+
 const products = [
   {
     title: 'Kompor Gas Industrial 6 Burner',
     category: 'Peralatan Masak',
     desc: 'Kompor gas 6 tungku dengan body stainless steel 304, api besar untuk wok.',
-    image: 'https://placehold.co/600x400/F7F6F3/1C1C1E?text=Kompor+Gas+6+Burner',
+    image: img1,
   },
   {
     title: 'Meja Kerja Stainless 180x70',
     category: 'Meja & Prep',
     desc: 'Meja kerja custom ukuran 180x70x80cm, 2 rak bawah, material food grade.',
-    image: 'https://placehold.co/600x400/1C1C1E/F7F6F3?text=Meja+Kerja+Stainless',
+    image: img2,
   },
   {
     title: 'Hood Exhaust Custom',
     category: 'Exhaust & Ventilasi',
     desc: 'Canopy hood custom sesuai ukuran kompor, dilengkapi filter grease.',
-    image: 'https://placehold.co/600x400/F7F6F3/1C1C1E?text=Hood+Exhaust+Custom',
+    image: img3,
   },
   {
     title: 'Deep Fryer Gas 2 Tank',
     category: 'Peralatan Masak',
     desc: 'Deep fryer gas 2 tank dengan thermostat, kapasitas besar untuk frying.',
-    image: 'https://placehold.co/600x400/1C1C1E/F7F6F3?text=Deep+Fryer+Gas',
+    image: img1,
   },
   {
     title: 'Rak Display 4 Tingkat',
     category: 'Rak & Storage',
     desc: 'Rak stainless steel 4 tingkat untuk display atau penyimpanan bahan.',
-    image: 'https://placehold.co/600x400/F7F6F3/1C1C1E?text=Rak+Display+4+Tingkat',
+    image: img2,
   },
   {
     title: 'Prep Table dengan Under Shelf',
     category: 'Meja & Prep',
     desc: 'Meja prep dengan under shelf dan backsplash, ideal untuk area plating.',
-    image: 'https://placehold.co/600x400/1C1C1E/F7F6F3?text=Prep+Table+Under+Shelf',
+    image: img3,
   },
   {
     title: 'Cold Storage Walk-in Chiller',
     category: 'Pendingin',
     desc: 'Walk-in chiller custom ukuran sesuai ruangan, suhu 2-8°C.',
-    image: 'https://placehold.co/600x400/1C1C1E/F7F6F3?text=Walk-in+Chiller',
+    image: img1,
   },
   {
     title: 'Grease Trap 3 Compartment',
     category: 'Exhaust & Ventilasi',
     desc: 'Grease trap 3 kompartemen stainless steel, mencegah lemak masuk saluran.',
-    image: 'https://placehold.co/600x400/F7F6F3/1C1C1E?text=Grease+Trap+3+Comp',
+    image: img2,
   },
 ]
 

@@ -39,7 +39,7 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <img
-                src="https://placehold.co/600x700/1C1C1E/F7F6F3?text=Stainless+Steel+Kitchen"
+                src="/pemasangan-kitchen-custom.png"
                 alt="BS Engineering Kitchen Equipment"
                 className="w-full aspect-[6/7] object-cover rounded-sm"
               />
@@ -73,12 +73,12 @@ export default function Home() {
               {
                 title: 'Komersial Combi Oven',
                 category: 'Peralatan Masak',
-                image: 'https://placehold.co/600x450/F7F6F3/1C1C1E?text=Combi+Oven',
+                image: '/pemasangan-kitchen-sesuai-request.jpeg',
               },
               {
                 title: 'Prep Table Custom',
                 category: 'Meja Kerja',
-                image: 'https://placehold.co/600x450/1C1C1E/F7F6F3?text=Prep+Table+Custom',
+                image: '/pemasangan-kitchen-sesuai-ruangan.png',
               },
             ].map((project) => (
               <Link

@@ -115,7 +115,7 @@ export default function Contact() {
                   <h3 className="text-xs uppercase tracking-widest text-warm-gray mb-2">
                     Telepon
                   </h3>
-                  <p className="text-charcoal">+62 812 3456 7890</p>
+                  <p className="text-charcoal">0895361601095</p>
                 </div>
                 <div>
                   <h3 className="text-xs uppercase tracking-widest text-warm-gray mb-2">

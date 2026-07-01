@@ -19,7 +19,7 @@ export default function About() {
       <section className="border-b border-charcoal/5">
         <div className="max-w-6xl mx-auto px-6 py-12">
           <img
-            src="https://placehold.co/1200x500/1C1C1E/F7F6F3?text=Workshop+BS+Engineering"
+            src="/pemasangan-kitchen-sesuai-ruangan.png"
             alt="Workshop BS Engineering"
             className="w-full aspect-[12/5] object-cover rounded-sm"
           />
