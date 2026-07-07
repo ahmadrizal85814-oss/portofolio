@@ -45,7 +45,7 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-2 text-sm text-cream/70">
               <li>info@bsengineering.id</li>
-              <li>Jakarta, Indonesia</li>
+              <li>JVV3+J43, Jl. Akses UI, Tugu, Cimanggis, Depok, Jawa Barat 16451</li>
             </ul>
           </div>
         </div>
@@ -56,13 +56,18 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} BS Engineering. Hak cipta dilindungi.
           </p>
           <div className="flex gap-6">
-            {['Instagram', 'WhatsApp', 'LinkedIn'].map((social) => (
+            {[
+              { name: 'Instagram', url: 'https://www.instagram.com/bs_engineering1?igsh=MXlreWZvNDhpcmJv' },
+              { name: 'TikTok', url: 'https://www.tiktok.com/@bsedepok?_r=1&_t=ZS-97p8XPPMkHo' },
+            ].map((social) => (
               <a
-                key={social}
-                href="#"
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-xs text-cream/40 hover:text-cream transition-colors"
               >
-                {social}
+                {social.name}
               </a>
             ))}
           </div>

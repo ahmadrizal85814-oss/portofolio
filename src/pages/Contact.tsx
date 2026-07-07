@@ -121,20 +121,25 @@ export default function Contact() {
                   <h3 className="text-xs uppercase tracking-widest text-warm-gray mb-2">
                     Lokasi
                   </h3>
-                  <p className="text-charcoal">Jakarta, Indonesia</p>
+                  <p className="text-charcoal">JVV3+J43 BS Engineering, Jl. Akses UI, Tugu, Kec. Cimanggis, Kota Depok, Jawa Barat 16451</p>
                 </div>
                 <div>
                   <h3 className="text-xs uppercase tracking-widest text-warm-gray mb-2">
                     Sosial
                   </h3>
                   <div className="flex gap-4">
-                    {['Instagram', 'WhatsApp', 'LinkedIn'].map((s) => (
+                    {[
+                      { name: 'Instagram', url: 'https://www.instagram.com/bs_engineering1?igsh=MXlreWZvNDhpcmJv' },
+                      { name: 'TikTok', url: 'https://www.tiktok.com/@bsedepok?_r=1&_t=ZS-97p8XPPMkHo' },
+                    ].map((s) => (
                       <a
-                        key={s}
-                        href="#"
+                        key={s.name}
+                        href={s.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-sm text-warm-gray hover:text-charcoal transition-colors"
                       >
-                        {s}
+                        {s.name}
                       </a>
                     ))}
                   </div>
