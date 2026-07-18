@@ -1,59 +1,97 @@
 import { useState } from 'react'
 
-const categories = ['Semua', 'Peralatan Masak', 'Meja & Prep', 'Pendingin', 'Rak & Storage', 'Exhaust & Ventilasi']
-
-const img1 = '/pemasangan-kitchen-custom.png'
-const img2 = '/pemasangan-kitchen-sesuai-request.jpeg'
-const img3 = '/pemasangan-kitchen-sesuai-ruangan.png'
+const categories = ['Semua', 'Kompor & Peralatan Masak', 'Sink & Washing', 'Meja & Prep', 'Rak & Storage', 'Exhaust & Ventilasi']
 
 const products = [
   {
-    title: 'Kompor Gas Industrial 6 Burner',
-    category: 'Peralatan Masak',
-    desc: 'Kompor gas 6 tungku dengan body stainless steel 304, api besar untuk wok.',
-    image: img1,
+    title: 'Gas Flat Grilled',
+    category: 'Kompor & Peralatan Masak',
+    desc: 'Kompor gas flat grilled dengan body stainless steel, cocok untuk grilling daging dan seafood.',
+    image: '/katalog-produk-kitchenset/Gas-Flat-Griled.png',
   },
   {
-    title: 'Meja Kerja Stainless 180x70',
+    title: 'Stove 4 Burner',
+    category: 'Kompor & Peralatan Masak',
+    desc: 'Kompor gas 4 burner dengan api merata, material stainless steel food grade.',
+    image: '/katalog-produk-kitchenset/Stove-4Burner.png',
+  },
+  {
+    title: 'Kwali Range',
+    category: 'Kompor & Peralatan Masak',
+    desc: 'Kwali range stainless steel dengan burner besar, ideal untuk masakan chinese food.',
+    image: '/katalog-produk-kitchenset/Kwalirange.png',
+  },
+  {
+    title: 'Double Kwali Range',
+    category: 'Kompor & Peralatan Masak',
+    desc: 'Double kwali range 2 tungku besar, stainless steel heavy duty untuk kebutuhan komersial.',
+    image: '/katalog-produk-kitchenset/Double-Kwalieange.png',
+  },
+  {
+    title: 'Custom Single Kwali Range',
+    category: 'Kompor & Peralatan Masak',
+    desc: 'Single kwali range custom sesuai kebutuhan dapur, material stainless steel pilihan.',
+    image: '/katalog-produk-kitchenset/custom-single-kwalirange.png',
+  },
+  {
+    title: 'Noodle Cooker',
+    category: 'Kompor & Peralatan Masak',
+    desc: 'Noodle cooker gas dengan kapasitas besar, khusus untuk merebus mie dan pasta.',
+    image: '/katalog-produk-kitchenset/Noodle-coocker.png',
+  },
+  {
+    title: 'Stockpot',
+    category: 'Kompor & Peralatan Masak',
+    desc: 'Stockpot stainless steel untuk merebus kaldu dan sup dalam jumlah besar.',
+    image: '/katalog-produk-kitchenset/stockpot.png',
+  },
+  {
+    title: 'Stockpot Otomatis',
+    category: 'Kompor & Peralatan Masak',
+    desc: 'Stockpot otomatis dengan sistem pengadukan, memudahkan proses pemasakan kaldu.',
+    image: '/katalog-produk-kitchenset/Stockpor-otomatis.png',
+  },
+  {
+    title: 'Gastronom',
+    category: 'Kompor & Peralatan Masak',
+    desc: 'Gastronom stainless steel untuk menyimpan dan menyajikan makanan di buffet line.',
+    image: '/katalog-produk-kitchenset/Gastronom.png',
+  },
+  {
+    title: 'Single Sink Big Bowl',
+    category: 'Sink & Washing',
+    desc: 'Single sink big bowl stainless steel, ukuran besar untuk mencuci peralatan dapur.',
+    image: '/katalog-produk-kitchenset/Single-sink-bigbowl.png',
+  },
+  {
+    title: 'Double Sink',
+    category: 'Sink & Washing',
+    desc: 'Double sink stainless steel 2 kompartemen, untuk area pencucian dan pembilasan.',
+    image: '/katalog-produk-kitchenset/double-sink.png',
+  },
+  {
+    title: 'Work Table',
     category: 'Meja & Prep',
-    desc: 'Meja kerja custom ukuran 180x70x80cm, 2 rak bawah, material food grade.',
-    image: img2,
+    desc: 'Meja kerja stainless steel custom ukuran sesuai kebutuhan dapur komersial.',
+    image: '/katalog-produk-kitchenset/work-table.png',
+  },
+  {
+    title: 'Worktable dengan Backsplash',
+    category: 'Meja & Prep',
+    desc: 'Worktable stainless steel dilengkapi backsplash dan rak bawah, ideal untuk area prep.',
+    image: '/katalog-produk-kitchenset/worktable.png',
+  },
+  {
+    title: 'Punched Rack 4 Tiers',
+    category: 'Rak & Storage',
+    desc: 'Rak stainless steel 4 tingkat model punched, untuk penyimpanan peralatan dapur.',
+    image: '/katalog-produk-kitchenset/Punched-rack-4tiers.png',
   },
   {
     title: 'Hood Exhaust Custom',
     category: 'Exhaust & Ventilasi',
-    desc: 'Canopy hood custom sesuai ukuran kompor, dilengkapi filter grease.',
-    image: img3,
-  },
-  {
-    title: 'Deep Fryer Gas 2 Tank',
-    category: 'Peralatan Masak',
-    desc: 'Deep fryer gas 2 tank dengan thermostat, kapasitas besar untuk frying.',
-    image: img1,
-  },
-  {
-    title: 'Rak Display 4 Tingkat',
-    category: 'Rak & Storage',
-    desc: 'Rak stainless steel 4 tingkat untuk display atau penyimpanan bahan.',
-    image: img2,
-  },
-  {
-    title: 'Prep Table dengan Under Shelf',
-    category: 'Meja & Prep',
-    desc: 'Meja prep dengan under shelf dan backsplash, ideal untuk area plating.',
-    image: img3,
-  },
-  {
-    title: 'Cold Storage Walk-in Chiller',
-    category: 'Pendingin',
-    desc: 'Walk-in chiller custom ukuran sesuai ruangan, suhu 2-8°C.',
-    image: img1,
-  },
-  {
-    title: 'Grease Trap 3 Compartment',
-    category: 'Exhaust & Ventilasi',
-    desc: 'Grease trap 3 kompartemen stainless steel, mencegah lemak masuk saluran.',
-    image: img2,
+    desc: 'Canopy hood custom sesuai ukuran kompor, dilengkapi filter grease dan blower.',
+    image: '/katalog-produk-kitchenset/Hood.png',
   },
 ]
 
@@ -108,7 +146,7 @@ export default function Products() {
       {/* Products grid */}
       <section>
         <div className="max-w-6xl mx-auto px-6 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((product) => (
               <div
                 key={product.title}

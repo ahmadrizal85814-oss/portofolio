@@ -19,11 +19,12 @@ export default function Contact() {
           <h1 className="text-4xl md:text-6xl font-medium tracking-tight leading-[1.1] max-w-2xl">
             Konsultasikan
             <br />
-            <span className="text-warm-gray">kebutuhan dapur Anda.</span>
+            <span className="text-warm-gray">proyek Anda.</span>
           </h1>
           <p className="text-warm-gray text-lg leading-relaxed max-w-md mt-6">
             Hubungi kami untuk konsultasi gratis, permintaan penawaran, atau
-            pertanyaan seputar produk stainless steel kami.
+            pertanyaan seputar kitchen equipment, furniture stainless, maupun
+            proyek konstruksi baja kami.
           </p>
         </div>
       </section>
@@ -75,10 +76,12 @@ export default function Contact() {
                       className="w-full bg-transparent border-b border-charcoal/20 py-2 text-charcoal focus:outline-none focus:border-charcoal transition-colors appearance-none"
                     >
                       <option value="">Pilih salah satu...</option>
-                      <option value="fabrikasi">Fabrikasi Custom</option>
-                      <option value="peralatan">Peralatan Masak</option>
-                      <option value="desain">Desain Layout Dapur</option>
-                      <option value="instalasi">Instalasi & Servis</option>
+                      <option value="kitchen">Kitchen Equipment</option>
+                      <option value="furniture">Furniture Stainless Steel</option>
+                      <option value="baja">Proyek Baja & Gudang</option>
+                      <option value="fabrikasi">Fabrikasi Logam Custom</option>
+                      <option value="desain">Desain & Engineering</option>
+                      <option value="instalasi">Instalasi & Maintenance</option>
                       <option value="other">Lainnya</option>
                     </select>
                   </div>
@@ -129,8 +132,8 @@ export default function Contact() {
                   </h3>
                   <div className="flex gap-4">
                     {[
-                      { name: 'Instagram', url: 'https://www.instagram.com/bs_engineering1?igsh=MXlreWZvNDhpcmJv' },
-                      { name: 'TikTok', url: 'https://www.tiktok.com/@bsedepok?_r=1&_t=ZS-97p8XPPMkHo' },
+                      { name: 'Instagram', url: 'https://www.instagram.com/bs_engineering1/' },
+                      { name: 'TikTok', url: 'https://www.tiktok.com/@bsedepok' },
                     ].map((s) => (
                       <a
                         key={s.name}

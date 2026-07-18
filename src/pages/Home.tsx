@@ -9,25 +9,25 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="max-w-3xl">
               <p className="text-warm-gray text-sm tracking-widest uppercase mb-6">
-                Peralatan Dapur Stainless Steel
+                Stainless Steel & Konstruksi Baja
               </p>
               <h1 className="text-5xl md:text-7xl font-medium tracking-tight leading-[1.1] mb-8">
-                Solusi dapur
+                Solusi
                 <br />
-                komersial
+                stainless steel
                 <br />
-                <span className="text-warm-gray">berkualitas tinggi.</span>
+                <span className="text-warm-gray">& konstruksi baja.</span>
               </h1>
               <p className="text-warm-gray text-lg leading-relaxed max-w-md mb-10">
-                Kami merancang dan memproduksi peralatan dapur stainless steel
-                custom untuk restoran, hotel, catering, dan industri kuliner.
+                Kami merancang dan memproduksi peralatan dapur, furniture stainless steel,
+                serta menangani proyek struktur baja — gudang, kanopi, railing, dan lainnya.
               </p>
               <div className="flex gap-4">
                 <Link
                   to="/products"
                   className="inline-flex items-center px-6 py-3 bg-charcoal text-cream text-sm tracking-wide hover:bg-charcoal-light transition-colors"
                 >
-                  Lihat produk
+                  Lihat katalog
                 </Link>
                 <Link
                   to="/contact"
@@ -48,56 +48,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured products */}
+      {/* Services Overview */}
       <section className="border-t border-charcoal/5">
         <div className="max-w-6xl mx-auto px-6 py-24">
-          <div className="flex justify-between items-end mb-12">
-            <div>
-              <p className="text-xs uppercase tracking-widest text-warm-gray mb-2">
-                Produk unggulan
-              </p>
-              <h2 className="text-3xl md:text-4xl font-medium tracking-tight">
-                Produk populer
-              </h2>
-            </div>
-            <Link
-              to="/products"
-              className="text-sm text-warm-gray hover:text-charcoal transition-colors hidden sm:block"
-            >
-              Lihat semua &rarr;
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <p className="text-xs uppercase tracking-widest text-warm-gray mb-2">
+            Layanan kami
+          </p>
+          <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-16">
+            Apa yang kami kerjakan
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Komersial Combi Oven',
-                category: 'Peralatan Masak',
-                image: '/pemasangan-kitchen-sesuai-request.jpeg',
+                title: 'Kitchen Equipment',
+                desc: 'Peralatan dapur stainless steel komersial — kompor, hood exhaust, meja kerja, rak, stockpot, dan lainnya.',
+                to: '/products',
+                image: '/katalog-produk-kitchenset/Stove-4Burner.png',
               },
               {
-                title: 'Prep Table Custom',
-                category: 'Meja Kerja',
-                image: '/pemasangan-kitchen-sesuai-ruangan.png',
+                title: 'Furniture Stainless',
+                desc: 'Furniture stainless steel custom — meja, rak, lemari, buffet counter, display showcase, dan troli.',
+                to: '/furniture',
+                image: '/katalog-produk-furniture/image.png',
               },
-            ].map((project) => (
+              {
+                title: 'Proyek Baja',
+                desc: 'Gudang baja, kanopi, mezzanine, railing tangga, dan berbagai proyek konstruksi struktur baja.',
+                to: '/steel-projects',
+                image: '/prooyek-bajaa/image.png',
+              },
+            ].map((item) => (
               <Link
-                key={project.title}
-                to="/products"
-                className="group block bg-cream-dark rounded-sm overflow-hidden hover:opacity-90 transition-opacity"
+                key={item.title}
+                to={item.to}
+                className="group bg-cream-dark rounded-sm overflow-hidden hover:opacity-90 transition-opacity"
               >
                 <img
-                  src={project.image}
-                  alt={project.title}
+                  src={item.image}
+                  alt={item.title}
                   className="w-full aspect-[4/3] object-cover"
                 />
                 <div className="p-6">
-                  <span className="text-xs uppercase tracking-widest text-warm-gray">
-                    {project.category}
+                  <h3 className="text-xl font-medium mb-2">{item.title}</h3>
+                  <p className="text-sm text-warm-gray leading-relaxed mb-3">
+                    {item.desc}
+                  </p>
+                  <span className="text-sm text-charcoal group-hover:underline">
+                    Lihat katalog &rarr;
                   </span>
-                  <h3 className="text-2xl font-medium mt-1">
-                    {project.title}
-                  </h3>
                 </div>
               </Link>
             ))}
@@ -118,15 +116,15 @@ export default function Home() {
             {[
               {
                 title: 'Custom Fabrication',
-                desc: 'Setiap produk dibuat sesuai kebutuhan dapur Anda.',
+                desc: 'Setiap produk dan proyek dibuat sesuai kebutuhan dan spesifikasi Anda.',
               },
               {
                 title: 'Material Premium',
-                desc: 'Stainless steel food-grade 304 yang tahan karat dan higienis.',
+                desc: 'Stainless steel food-grade dan material baja berkualitas tinggi yang tahan lama.',
               },
               {
                 title: 'Garansi & Servis',
-                desc: 'Garansi konstruksi dan layanan purna jual terpercaya.',
+                desc: 'Garansi konstruksi dan layanan purna jual terpercaya untuk setiap proyek.',
               },
             ].map((item) => (
               <div key={item.title} className="group">

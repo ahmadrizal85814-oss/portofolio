@@ -4,16 +4,39 @@ export default function Footer() {
   return (
     <footer className="bg-charcoal text-cream">
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div>
             <span className="text-lg font-medium tracking-tight">BS Engineering</span>
             <p className="text-cream/50 text-sm mt-3 leading-relaxed max-w-xs">
-              Solusi peralatan dapur stainless steel berkualitas tinggi untuk industri kuliner.
+              Solusi stainless steel & konstruksi baja berkualitas tinggi — kitchen equipment, furniture custom, dan proyek baja.
             </p>
           </div>
 
-          {/* Navigation */}
+          {/* Katalog */}
+          <div>
+            <h4 className="text-xs uppercase tracking-widest text-cream/40 mb-4">
+              Katalog
+            </h4>
+            <ul className="flex flex-col gap-2">
+              {[
+                { label: 'Kitchen Equipment', path: '/products' },
+                { label: 'Furniture Stainless', path: '/furniture' },
+                { label: 'Proyek Baja', path: '/steel-projects' },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link
+                    to={item.path}
+                    className="text-sm text-cream/70 hover:text-cream transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Navigasi */}
           <div>
             <h4 className="text-xs uppercase tracking-widest text-cream/40 mb-4">
               Navigasi
@@ -23,7 +46,6 @@ export default function Footer() {
                 { label: 'Beranda', path: '/' },
                 { label: 'Tentang', path: '/about' },
                 { label: 'Layanan', path: '/services' },
-                { label: 'Produk', path: '/products' },
                 { label: 'Kontak', path: '/contact' },
               ].map((item) => (
                 <li key={item.label}>
@@ -57,8 +79,8 @@ export default function Footer() {
           </p>
           <div className="flex gap-6">
             {[
-              { name: 'Instagram', url: 'https://www.instagram.com/bs_engineering1?igsh=MXlreWZvNDhpcmJv' },
-              { name: 'TikTok', url: 'https://www.tiktok.com/@bsedepok?_r=1&_t=ZS-97p8XPPMkHo' },
+              { name: 'Instagram', url: 'https://www.instagram.com/bs_engineering1/' },
+              { name: 'TikTok', url: 'https://www.tiktok.com/@bsedepok' },
             ].map((social) => (
               <a
                 key={social.name}

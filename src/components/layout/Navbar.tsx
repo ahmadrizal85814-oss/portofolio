@@ -5,7 +5,9 @@ const navLinks = [
   { to: '/', label: 'Beranda' },
   { to: '/about', label: 'Tentang' },
   { to: '/services', label: 'Layanan' },
-  { to: '/products', label: 'Produk' },
+  { to: '/products', label: 'Kitchen' },
+  { to: '/furniture', label: 'Furniture' },
+  { to: '/steel-projects', label: 'Proyek Baja' },
   { to: '/contact', label: 'Kontak' },
 ]
 
@@ -24,7 +26,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <li key={link.to}>
               <Link

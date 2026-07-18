@@ -8,7 +8,7 @@ export default function About() {
             Tentang kami
           </p>
           <h1 className="text-4xl md:text-6xl font-medium tracking-tight leading-[1.1] max-w-2xl">
-            Ahli di bidang
+            Lebih dari sekadar
             <br />
             <span className="text-warm-gray">stainless steel.</span>
           </h1>
@@ -32,35 +32,86 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
               <h2 className="text-2xl font-medium tracking-tight mb-6">
-                Cerita kami
+                Tentang BSE
               </h2>
               <p className="text-warm-gray leading-relaxed mb-4">
-                BS Engineering didirikan dengan satu fokus: menyediakan
-                peralatan dapur stainless steel yang kokoh, higienis, dan
-                dirancang khusus untuk kebutuhan industri kuliner Indonesia.
+                BS Engineering (BSE) adalah perusahaan yang bergerak di bidang
+                fabrikasi logam dan engineering, dengan kapabilitas yang melampaui
+                industri stainless steel semata. Didirikan atas dasar keahlian
+                teknik yang kuat dan komitmen terhadap kualitas, BSE melayani
+                berbagai kebutuhan industri — mulai dari kitchen equipment komersial,
+                furniture stainless steel custom, hingga konstruksi struktur baja
+                berskala besar.
               </p>
               <p className="text-warm-gray leading-relaxed">
-                Dengan pengalaman di bidang engineering dan fabrikasi logam,
-                kami memahami bahwa setiap dapur komersial membutuhkan solusi
-                yang berbeda. Itulah mengapa setiap produk kami dibuat custom
-                sesuai spesifikasi klien.
+                Dengan pengalaman bertahun-tahun di bidang engineering dan fabrikasi,
+                kami memahami bahwa setiap proyek memiliki tantangan unik. Oleh karena
+                itu, setiap solusi yang kami hadirkan dirancang secara custom,
+                disesuaikan dengan spesifikasi dan kebutuhan spesifik klien.
               </p>
             </div>
             <div>
               <h2 className="text-2xl font-medium tracking-tight mb-6">
-                Keahlian kami
+                Kapabilitas engineering kami
               </h2>
               <p className="text-warm-gray leading-relaxed mb-4">
-                Tim kami terdiri dari engineer dan teknisi berpengalaman yang
-                menguasai proses cutting, bending, welding, dan finishing
-                stainless steel dengan presisi tinggi.
+                BSE tidak hanya terbatas pada produk stainless steel. Tim engineer
+                dan teknisi kami memiliki kompetensi luas di berbagai bidang
+                fabrikasi logam dan konstruksi — meliputi proses cutting, bending,
+                welding, assembly, dan finishing dengan standar presisi tinggi.
               </p>
               <p className="text-warm-gray leading-relaxed">
-                Kami menggunakan material food-grade stainless steel 304 yang
-                memenuhi standar kebersihan industri makanan, memastikan setiap
-                produk aman dan tahan lama untuk penggunaan komersial.
+                Kami menangani proyek-proyek beragam: dari peralatan dapur komersial,
+                furniture stainless untuk rumah sakit dan hotel, gudang baja ringan
+                dan WF, kanopi, mezzanine, railing tangga, hingga struktur baja
+                custom untuk kebutuhan industri. Kapabilitas ini memungkinkan kami
+                menjadi mitra engineering yang andal untuk berbagai skala proyek.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bidang Keahlian */}
+      <section className="border-b border-charcoal/5">
+        <div className="max-w-6xl mx-auto px-6 py-24">
+          <h2 className="text-2xl font-medium tracking-tight mb-12">
+            Bidang keahlian kami
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Kitchen Equipment',
+                desc: 'Peralatan dapur komersial stainless steel — kompor industrial, hood exhaust, meja kerja, rak, stockpot, noodle cooker, dan berbagai peralatan custom lainnya.',
+              },
+              {
+                title: 'Furniture Stainless Steel',
+                desc: 'Furniture stainless steel custom untuk dapur komersial, laboratorium, rumah sakit, hotel, dan kebutuhan industri lainnya.',
+              },
+              {
+                title: 'Konstruksi Baja',
+                desc: 'Gudang baja ringan dan WF, kanopi, mezzanine, railing tangga, portal gate, serta struktur baja custom untuk berbagai keperluan.',
+              },
+              {
+                title: 'Fabrikasi Logam',
+                desc: 'Layanan fabrikasi logam umum — cutting, bending, welding, dan finishing dengan presisi tinggi sesuai spesifikasi teknis.',
+              },
+              {
+                title: 'Desain & Engineering',
+                desc: 'Perencanaan layout, desain struktural, visualisasi 3D, dan analisis teknis sebelum produksi dimulai.',
+              },
+              {
+                title: 'Instalasi & Maintenance',
+                desc: 'Pemasangan profesional di lokasi, maintenance berkala, serta layanan perbaikan dan spare part.',
+              },
+            ].map((item) => (
+              <div key={item.title}>
+                <h3 className="text-base font-medium mb-2">{item.title}</h3>
+                <p className="text-sm text-warm-gray leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -69,25 +120,25 @@ export default function About() {
       <section className="border-b border-charcoal/5">
         <div className="max-w-6xl mx-auto px-6 py-24">
           <h2 className="text-2xl font-medium tracking-tight mb-12">
-            Nilai yang kami pegang
+            Komitmen kami
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {[
               {
-                title: 'Kualitas',
-                desc: 'Material terbaik, konstruksi presisi.',
+                title: 'Kualitas Terjamin',
+                desc: 'Material premium dan proses fabrikasi terkontrol di setiap tahap produksi.',
               },
               {
-                title: 'Custom',
-                desc: 'Setiap produk sesuai kebutuhan Anda.',
+                title: 'Solusi Custom',
+                desc: 'Setiap proyek dirancang khusus sesuai kebutuhan dan spesifikasi klien.',
               },
               {
-                title: 'Kecepatan',
-                desc: 'Tepat waktu, tanpa mengorbankan mutu.',
+                title: 'Tepat Waktu',
+                desc: 'Komitmen penyelesaian proyek sesuai jadwal tanpa mengorbankan mutu.',
               },
               {
                 title: 'Kepercayaan',
-                desc: 'Garansi jelas, servis setelah pemasangan.',
+                desc: 'Garansi konstruksi, transparansi proses, dan layanan purna jual yang bertanggung jawab.',
               },
             ].map((value) => (
               <div key={value.title}>
