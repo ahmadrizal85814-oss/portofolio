@@ -39,8 +39,8 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <img
-                src="/pemasangan-kitchen-custom.png"
-                alt="BS Engineering Kitchen Equipment"
+                src="/Display/pemasangan-kitchen-custom.png"
+                alt="Bina Sekawan Engineering Kitchen Equipment"
                 className="w-full aspect-[6/7] object-cover rounded-sm"
               />
             </div>
@@ -57,25 +57,31 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-16">
             Apa yang kami kerjakan
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
+              {
+                title: 'Display Produk',
+                desc: 'Tampilan display dari proyek-proyek kitchen stainless steel kami yang telah selesai dikerjakan.',
+                to: '/display',
+                image: '/Display/pemasangan-kitchen-custom.png',
+              },
               {
                 title: 'Kitchen Equipment',
                 desc: 'Peralatan dapur stainless steel komersial — kompor, hood exhaust, meja kerja, rak, stockpot, dan lainnya.',
                 to: '/products',
-                image: '/katalog-produk-kitchenset/Stove-4Burner.png',
+                image: '/katalog-produk-kitchenset/Stove.4Burner.png',
               },
               {
                 title: 'Furniture Stainless',
                 desc: 'Furniture stainless steel custom — meja, rak, lemari, buffet counter, display showcase, dan troli.',
                 to: '/furniture',
-                image: '/katalog-produk-furniture/image.png',
+                image: '/katalog-produk-furniture/Custom.meja.ss.rosegold.png',
               },
               {
                 title: 'Proyek Baja',
                 desc: 'Gudang baja, kanopi, mezzanine, railing tangga, dan berbagai proyek konstruksi struktur baja.',
                 to: '/steel-projects',
-                image: '/prooyek-bajaa/image.png',
+                image: '/prooyek-bajaa/Pembuatan.kanopi.kaca.png',
               },
             ].map((item) => (
               <Link

@@ -4,58 +4,28 @@ const categories = ['Semua', 'Meja & Rak', 'Lemari & Cabinet', 'Display & Buffet
 
 const products = [
   {
-    title: 'Meja Kerja Stainless Steel',
+    title: 'Custom Meja SS Rosegold',
     category: 'Meja & Rak',
-    desc: 'Meja kerja stainless steel custom ukuran, cocok untuk dapur komersial, laboratorium, atau workshop.',
-    image: '/katalog-produk-furniture/image.png',
+    desc: 'Meja kerja stainless steel dengan finishing rosegold yang elegan.',
+    image: '/katalog-produk-furniture/Custom.meja.ss.rosegold.png',
   },
   {
-    title: 'Worktable dengan Backsplash & Rak',
-    category: 'Meja & Rak',
-    desc: 'Meja kerja dilengkapi backsplash dan rak bawah, material stainless steel food grade.',
-    image: '/katalog-produk-furniture/cusstom-stainless-buat-restorant.png',
-  },
-  {
-    title: 'Custom Kaki Meja Stainless',
-    category: 'Meja & Rak',
-    desc: 'Kaki meja stainless steel custom untuk restoran, kokoh dan tahan lama.',
-    image: '/katalog-produk-furniture/cusstom-kaki-meja-stainless-buat-restorant.png',
-  },
-  {
-    title: 'Lemari Penyimpanan Stainless',
-    category: 'Lemari & Cabinet',
-    desc: 'Lemari penyimpanan stainless steel dengan pintu geser, cocok untuk dapur dan gudang.',
-    image: '/katalog-produk-furniture/cusstom-kaki-meja-stainless-restorant.png',
-  },
-  {
-    title: 'Cabinet Dapur Stainless Steel',
-    category: 'Lemari & Cabinet',
-    desc: 'Cabinet dapur custom stainless steel, dilengkapi rak adjustable dan soft-close hinge.',
-    image: '/katalog-produk-furniture/image.png',
-  },
-  {
-    title: 'Buffet Counter Stainless',
-    category: 'Display & Buffet',
-    desc: 'Counter buffet stainless steel untuk display makanan, dilengkapi warming lamp.',
-    image: '/katalog-produk-furniture/cusstom-stainless-buat-restorant.png',
-  },
-  {
-    title: 'Display Showcase Stainless',
-    category: 'Display & Buffet',
-    desc: 'Showcase display stainless steel dengan kaca, ideal untuk toko roti dan cafe.',
-    image: '/katalog-produk-furniture/cusstom-kaki-meja-stainless-buat-restorant.png',
-  },
-  {
-    title: 'Shelving Unit Custom',
+    title: 'Custom Kaki Meja Stainless Restorant',
     category: 'Custom',
-    desc: 'Shelving unit stainless steel custom sesuai dimensi ruangan, untuk gudang atau pantry.',
-    image: '/katalog-produk-furniture/cusstom-kaki-meja-stainless-restorant.png',
+    desc: 'Kaki meja stainless custom untuk kebutuhan restoran.',
+    image: '/katalog-produk-furniture/custom-kaki-meja-stainless-restorant.png',
   },
   {
-    title: 'Troli Service Stainless',
+    title: 'Custom Kaki Meja Stainless Buat Restorant',
     category: 'Custom',
-    desc: 'Troli service stainless steel dengan roda, untuk restoran, hotel, dan rumah sakit.',
-    image: '/katalog-produk-furniture/image.png',
+    desc: 'Pembuatan kaki meja berbahan stainless steel untuk restoran.',
+    image: '/katalog-produk-furniture/custom.kaki.meja.stainless.buat.restorant.png',
+  },
+  {
+    title: 'Custom Stainless Buat Restorant',
+    category: 'Custom',
+    desc: 'Fabrikasi peralatan stainless steel custom khusus restoran.',
+    image: '/katalog-produk-furniture/custom.stainless.buat.restorant.png',
   },
 ]
 

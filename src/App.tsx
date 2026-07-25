@@ -7,6 +7,7 @@ import Products from './pages/Products'
 import Furniture from './pages/Furniture'
 import SteelProjects from './pages/SteelProjects'
 import Contact from './pages/Contact'
+import Display from './pages/Display'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/display" element={<Display />} />
           <Route path="/products" element={<Products />} />
           <Route path="/furniture" element={<Furniture />} />
           <Route path="/steel-projects" element={<SteelProjects />} />

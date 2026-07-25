@@ -7,7 +7,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <span className="text-lg font-medium tracking-tight">BS Engineering</span>
+            <div className="flex items-center gap-2.5">
+              <img src="/Logo/brands-logo.png" alt="Bina Sekawan Engineering" className="h-8 w-auto object-contain brightness-0 invert" />
+              <span className="text-lg font-medium tracking-tight">Bina Sekawan Engineering</span>
+            </div>
             <p className="text-cream/50 text-sm mt-3 leading-relaxed max-w-xs">
               Solusi stainless steel & konstruksi baja berkualitas tinggi — kitchen equipment, furniture custom, dan proyek baja.
             </p>
@@ -66,7 +69,8 @@ export default function Footer() {
               Hubungi kami
             </h4>
             <ul className="flex flex-col gap-2 text-sm text-cream/70">
-              <li>info@bsengineering.id</li>
+              <li>BS.engineeringdpk.com</li>
+              <li>Telepon / WA: 082260802076</li>
               <li>JVV3+J43, Jl. Akses UI, Tugu, Cimanggis, Depok, Jawa Barat 16451</li>
             </ul>
           </div>
@@ -75,21 +79,27 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-cream/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-xs text-cream/40">
-            &copy; {new Date().getFullYear()} BS Engineering. Hak cipta dilindungi.
+            &copy; {new Date().getFullYear()} Bina Sekawan Engineering. Hak cipta dilindungi.
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-5 items-center">
             {[
-              { name: 'Instagram', url: 'https://www.instagram.com/bs_engineering1/' },
-              { name: 'TikTok', url: 'https://www.tiktok.com/@bsedepok' },
+              { name: 'WhatsApp', url: 'https://wa.me/6282260802076', icon: '/cikon.sosmed/icon web/whatsap.png' },
+              { name: 'Instagram', url: 'https://www.instagram.com/bs_engineering1?igsh=MXlreWZvNDhpcmJv', icon: '/cikon.sosmed/icon web/instagram.png' },
+              { name: 'TikTok', url: 'https://www.tiktok.com/@bsedepok?_r=1&_t=ZS-97p8XPPMkHo', icon: '/cikon.sosmed/icon web/tiktok.png' },
             ].map((social) => (
               <a
                 key={social.name}
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-cream/40 hover:text-cream transition-colors"
+                className="flex items-center gap-2 text-xs text-cream/70 hover:text-cream transition-all group"
               >
-                {social.name}
+                <img
+                  src={social.icon}
+                  alt={social.name}
+                  className="w-5 h-5 object-contain group-hover:scale-110 transition-transform"
+                />
+                <span>{social.name}</span>
               </a>
             ))}
           </div>

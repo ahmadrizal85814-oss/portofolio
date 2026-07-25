@@ -20,7 +20,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-6 py-12">
           <img
             src="/pemasangan-kitchen-sesuai-ruangan.png"
-            alt="Workshop BS Engineering"
+            alt="Workshop Bina Sekawan Engineering"
             className="w-full aspect-[12/5] object-cover rounded-sm"
           />
         </div>
@@ -35,7 +35,7 @@ export default function About() {
                 Tentang BSE
               </h2>
               <p className="text-warm-gray leading-relaxed mb-4">
-                BS Engineering (BSE) adalah perusahaan yang bergerak di bidang
+                Bina Sekawan Engineering (BSE) adalah perusahaan yang bergerak di bidang
                 fabrikasi logam dan engineering, dengan kapabilitas yang melampaui
                 industri stainless steel semata. Didirikan atas dasar keahlian
                 teknik yang kuat dan komitmen terhadap kualitas, BSE melayani

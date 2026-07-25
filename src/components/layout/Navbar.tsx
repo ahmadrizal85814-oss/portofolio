@@ -16,13 +16,14 @@ export default function Navbar() {
   const { pathname } = useLocation()
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-cream/80 backdrop-blur-md border-b border-charcoal/5">
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-md border-b border-charcoal/5">
+      <nav className="max-w-6xl mx-auto px-6 h-24 md:h-28 flex items-center justify-between py-2">
         <Link
           to="/"
-          className="text-charcoal font-medium text-lg tracking-tight hover:opacity-60 transition-opacity"
+          className="flex items-center gap-3.5 text-charcoal font-medium text-lg md:text-xl tracking-tight hover:opacity-60 transition-opacity"
         >
-          BS Engineering
+          <img src="/Logo/brands-logo.png" alt="Bina Sekawan Engineering" className="h-16 md:h-20 w-auto object-contain" />
+          <span>Bina Sekawan Engineering</span>
         </Link>
 
         {/* Desktop */}
