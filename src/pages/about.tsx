@@ -1,3 +1,5 @@
+import { getAssetUrl } from '../utils/asset'
+
 export default function About() {
   return (
     <>
@@ -19,9 +21,12 @@ export default function About() {
       <section className="border-b border-charcoal/5">
         <div className="max-w-6xl mx-auto px-6 py-12">
           <img
-            src="/pemasangan-kitchen-sesuai-ruangan.png"
+            src={getAssetUrl('/Display/pemasangan-kitchen-custom.png')}
             alt="Workshop Bina Sekawan Engineering"
-            className="w-full aspect-[12/5] object-cover rounded-sm"
+            className="w-full aspect-[16/7] md:aspect-[21/9] object-cover rounded-sm"
+            onError={(e) => {
+              e.currentTarget.src = getAssetUrl('/Display/pemasangan-kitchen-sesuai-request.jpeg')
+            }}
           />
         </div>
       </section>

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { getAssetUrl } from '../utils/asset'
 
 const categories = ['Semua', 'Gudang Baja', 'Kanopi & Atap', 'Railing & Tangga', 'Struktur Baja', 'Custom']
 
@@ -7,31 +8,31 @@ const projects = [
     title: 'Pembuatan Kanopi Kaca',
     category: 'Kanopi & Atap',
     desc: 'Pembuatan kanopi rangka baja dengan atap kaca tempered untuk tampilan elegan.',
-    image: '/prooyek-bajaa/Pembuatan.kanopi.kaca.png',
+    image: getAssetUrl('/prooyek-bajaa/Pembuatan.kanopi.kaca.png'),
   },
   {
     title: 'Aplikator Baja Hbeam',
     category: 'Struktur Baja',
     desc: 'Pemasangan struktur baja H-beam untuk bangunan industri dan gudang.',
-    image: '/prooyek-bajaa/aplikator.baja.Hbeam.jpeg',
+    image: getAssetUrl('/prooyek-bajaa/aplikator.baja.Hbeam.jpeg'),
   },
   {
     title: 'Custom Desain',
     category: 'Custom',
     desc: 'Pengerjaan struktur baja dan fabrikasi sesuai dengan custom desain klien.',
-    image: '/prooyek-bajaa/custom.desain.png',
+    image: getAssetUrl('/prooyek-bajaa/custom.desain.png'),
   },
   {
     title: 'Pemasangan Instalasi Exhaust',
     category: 'Custom',
     desc: 'Instalasi sistem exhaust komersial terintegrasi dengan struktur bangunan.',
-    image: '/prooyek-bajaa/pemasangan.instalasi.exhaust.png',
+    image: getAssetUrl('/prooyek-bajaa/pemasangan.instalasi.exhaust.png'),
   },
   {
     title: 'Pengerjaan Kanopi',
     category: 'Kanopi & Atap',
     desc: 'Pengerjaan kanopi baja ringan atau berat untuk carport maupun area parkir.',
-    image: '/prooyek-bajaa/pengerjaan.kanopi.png',
+    image: getAssetUrl('/prooyek-bajaa/pengerjaan.kanopi.png'),
   },
 ]
 

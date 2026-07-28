@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { getAssetUrl } from '../../utils/asset'
 
 const navLinks = [
   { to: '/', label: 'Beranda' },
@@ -22,7 +23,7 @@ export default function Navbar() {
           to="/"
           className="flex items-center gap-3.5 text-charcoal font-medium text-lg md:text-xl tracking-tight hover:opacity-60 transition-opacity"
         >
-          <img src="/Logo/brands-logo.png" alt="Bina Sekawan Engineering" className="h-16 md:h-20 w-auto object-contain" />
+          <img src={getAssetUrl('/Logo/brands-logo.png')} alt="Bina Sekawan Engineering" className="h-16 md:h-20 w-auto object-contain" />
           <span>Bina Sekawan Engineering</span>
         </Link>
 

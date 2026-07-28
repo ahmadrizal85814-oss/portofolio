@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { getAssetUrl } from '../utils/asset'
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <img
-                src="/Display/pemasangan-kitchen-custom.png"
+                src={getAssetUrl('/Display/pemasangan-kitchen-custom.png')}
                 alt="Bina Sekawan Engineering Kitchen Equipment"
                 className="w-full aspect-[6/7] object-cover rounded-sm"
               />
@@ -63,25 +64,25 @@ export default function Home() {
                 title: 'Display Produk',
                 desc: 'Tampilan display dari proyek-proyek kitchen stainless steel kami yang telah selesai dikerjakan.',
                 to: '/display',
-                image: '/Display/pemasangan-kitchen-custom.png',
+                image: getAssetUrl('/Display/pemasangan-kitchen-custom.png'),
               },
               {
                 title: 'Kitchen Equipment',
                 desc: 'Peralatan dapur stainless steel komersial — kompor, hood exhaust, meja kerja, rak, stockpot, dan lainnya.',
                 to: '/products',
-                image: '/katalog-produk-kitchenset/Stove.4Burner.png',
+                image: getAssetUrl('/katalog-produk-kitchenset/Stove.4Burner.png'),
               },
               {
                 title: 'Furniture Stainless',
                 desc: 'Furniture stainless steel custom — meja, rak, lemari, buffet counter, display showcase, dan troli.',
                 to: '/furniture',
-                image: '/katalog-produk-furniture/Custom.meja.ss.rosegold.png',
+                image: getAssetUrl('/katalog-produk-furniture/Custom.meja.ss.rosegold.png'),
               },
               {
                 title: 'Proyek Baja',
                 desc: 'Gudang baja, kanopi, mezzanine, railing tangga, dan berbagai proyek konstruksi struktur baja.',
                 to: '/steel-projects',
-                image: '/prooyek-bajaa/Pembuatan.kanopi.kaca.png',
+                image: getAssetUrl('/prooyek-bajaa/Pembuatan.kanopi.kaca.png'),
               },
             ].map((item) => (
               <Link

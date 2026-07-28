@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { getAssetUrl } from '../../utils/asset'
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5">
-              <img src="/Logo/brands-logo.png" alt="Bina Sekawan Engineering" className="h-8 w-auto object-contain brightness-0 invert" />
+              <img src={getAssetUrl('/Logo/brands-logo.png')} alt="Bina Sekawan Engineering" className="h-8 w-auto object-contain brightness-0 invert" />
               <span className="text-lg font-medium tracking-tight">Bina Sekawan Engineering</span>
             </div>
             <p className="text-cream/50 text-sm mt-3 leading-relaxed max-w-xs">
@@ -83,9 +84,9 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap gap-5 items-center">
             {[
-              { name: 'WhatsApp', url: 'https://wa.me/6282260802076', icon: '/cikon.sosmed/icon web/whatsap.png' },
-              { name: 'Instagram', url: 'https://www.instagram.com/bs_engineering1?igsh=MXlreWZvNDhpcmJv', icon: '/cikon.sosmed/icon web/instagram.png' },
-              { name: 'TikTok', url: 'https://www.tiktok.com/@bsedepok?_r=1&_t=ZS-97p8XPPMkHo', icon: '/cikon.sosmed/icon web/tiktok.png' },
+              { name: 'WhatsApp', url: 'https://wa.me/6282260802076', icon: getAssetUrl('/cikon.sosmed/icon-web/whatsap.png') },
+              { name: 'Instagram', url: 'https://www.instagram.com/bs_engineering1?igsh=MXlreWZvNDhpcmJv', icon: getAssetUrl('/cikon.sosmed/icon-web/instagram.png') },
+              { name: 'TikTok', url: 'https://www.tiktok.com/@bsedepok?_r=1&_t=ZS-97p8XPPMkHo', icon: getAssetUrl('/cikon.sosmed/icon-web/tiktok.png') },
             ].map((social) => (
               <a
                 key={social.name}

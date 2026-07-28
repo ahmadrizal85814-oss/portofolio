@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import { getAssetUrl } from '../../utils/asset'
 
 export default function Layout() {
   return (
@@ -20,7 +21,7 @@ export default function Layout() {
         aria-label="Chat WhatsApp"
       >
         <img
-          src="/cikon.sosmed/icon web/whatsap.png"
+          src={getAssetUrl('/cikon.sosmed/icon-web/whatsap.png')}
           alt="WhatsApp"
           className="w-6 h-6 object-contain"
         />
@@ -29,3 +30,4 @@ export default function Layout() {
     </div>
   )
 }
+

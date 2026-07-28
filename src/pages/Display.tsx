@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { getAssetUrl } from '../utils/asset'
 
 const categories = ['Semua', 'Kitchen Custom', 'Kitchen Sesuai Request', 'Kitchen Sesuai Ruangan']
 
@@ -7,19 +8,19 @@ const projects = [
     title: 'Pemasangan Kitchen Custom',
     category: 'Kitchen Custom',
     desc: 'Pemasangan kitchen custom sesuai dengan kebutuhan ruang dan spesifikasi.',
-    image: '/Display/pemasangan-kitchen-custom.png',
+    image: getAssetUrl('/Display/pemasangan-kitchen-custom.png'),
   },
   {
     title: 'Pemasangan Kitchen Sesuai Request',
     category: 'Kitchen Sesuai Request',
     desc: 'Pemasangan kitchen stainless steel sesuai dengan request khusus klien.',
-    image: '/Display/pemasangan-kitchen-sesuai-request.jpeg',
+    image: getAssetUrl('/Display/pemasangan-kitchen-sesuai-request.jpeg'),
   },
   {
     title: 'Pemasangan Kitchen Sesuai Ruangan',
     category: 'Kitchen Sesuai Ruangan',
     desc: 'Pemasangan kitchen set yang disesuaikan dengan dimensi ruangan yang ada.',
-    image: '/Display/pemasangan-kitchen-sesuai-ruangan.png',
+    image: getAssetUrl('/Display/pemasangan-kitchen-sesuai-ruangan.png'),
   },
 ]
 

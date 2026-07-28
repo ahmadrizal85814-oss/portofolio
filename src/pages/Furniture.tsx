@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { getAssetUrl } from '../utils/asset'
 
 const categories = ['Semua', 'Meja & Rak', 'Lemari & Cabinet', 'Display & Buffet', 'Custom']
 
@@ -7,25 +8,25 @@ const products = [
     title: 'Custom Meja SS Rosegold',
     category: 'Meja & Rak',
     desc: 'Meja kerja stainless steel dengan finishing rosegold yang elegan.',
-    image: '/katalog-produk-furniture/Custom.meja.ss.rosegold.png',
+    image: getAssetUrl('/katalog-produk-furniture/Custom.meja.ss.rosegold.png'),
   },
   {
     title: 'Custom Kaki Meja Stainless Restorant',
     category: 'Custom',
     desc: 'Kaki meja stainless custom untuk kebutuhan restoran.',
-    image: '/katalog-produk-furniture/custom-kaki-meja-stainless-restorant.png',
+    image: getAssetUrl('/katalog-produk-furniture/custom-kaki-meja-stainless-restorant.png'),
   },
   {
     title: 'Custom Kaki Meja Stainless Buat Restorant',
     category: 'Custom',
     desc: 'Pembuatan kaki meja berbahan stainless steel untuk restoran.',
-    image: '/katalog-produk-furniture/custom.kaki.meja.stainless.buat.restorant.png',
+    image: getAssetUrl('/katalog-produk-furniture/custom.kaki.meja.stainless.buat.restorant.png'),
   },
   {
     title: 'Custom Stainless Buat Restorant',
     category: 'Custom',
     desc: 'Fabrikasi peralatan stainless steel custom khusus restoran.',
-    image: '/katalog-produk-furniture/custom.stainless.buat.restorant.png',
+    image: getAssetUrl('/katalog-produk-furniture/custom.stainless.buat.restorant.png'),
   },
 ]
 

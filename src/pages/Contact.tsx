@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { getAssetUrl } from '../utils/asset'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
@@ -132,9 +133,9 @@ export default function Contact() {
                   </h3>
                   <div className="flex flex-wrap gap-4">
                     {[
-                      { name: 'WhatsApp', url: 'https://wa.me/6282260802076', icon: '/cikon.sosmed/icon web/whatsap.png' },
-                      { name: 'Instagram', url: 'https://www.instagram.com/bs_engineering1?igsh=MXlreWZvNDhpcmJv', icon: '/cikon.sosmed/icon web/instagram.png' },
-                      { name: 'TikTok', url: 'https://www.tiktok.com/@bsedepok?_r=1&_t=ZS-97p8XPPMkHo', icon: '/cikon.sosmed/icon web/tiktok.png' },
+                      { name: 'WhatsApp', url: 'https://wa.me/6282260802076', icon: getAssetUrl('/cikon.sosmed/icon-web/whatsap.png') },
+                      { name: 'Instagram', url: 'https://www.instagram.com/bs_engineering1?igsh=MXlreWZvNDhpcmJv', icon: getAssetUrl('/cikon.sosmed/icon-web/instagram.png') },
+                      { name: 'TikTok', url: 'https://www.tiktok.com/@bsedepok?_r=1&_t=ZS-97p8XPPMkHo', icon: getAssetUrl('/cikon.sosmed/icon-web/tiktok.png') },
                     ].map((s) => (
                       <a
                         key={s.name}
