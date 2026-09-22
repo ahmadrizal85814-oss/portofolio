@@ -10,8 +10,10 @@ import Contact from './pages/Contact'
 import Display from './pages/Display'
 
 function App() {
+  const baseUrl = import.meta.env.BASE_URL === './' || import.meta.env.BASE_URL === '.' ? '/' : import.meta.env.BASE_URL
+
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename={baseUrl}>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
