@@ -156,6 +156,42 @@ const products: ProductItem[] = [
 
   // --- DAPUR KONVENSIONAL (RESIDENSIAL & SEMI-KOMERSIAL) ---
   {
+    title: 'Kitchen Set Stainless Top Marmer Mewah',
+    kitchenType: 'konvensional',
+    category: 'Meja & Prep',
+    desc: 'Kitchen set residensial kombinasi top table marmer onyx mewah dan kabinet bawah full stainless steel SUS 304 hairline finish. 100% tahan air, anti rayap, bebas lapuk, serta higienis untuk keluarga.',
+    specs: ['SUS 304 Hairline Satin', 'Top Table Marmer Onyx Mewah', '100% Anti Rayap & Tahan Air', 'Engsel Soft-Close Hydraulic'],
+    suitableFor: 'Rumah Mewah, Villa, Dapur Bersih Residensial',
+    image: getAssetUrl('/katalog-produk-kitchenset/kitchen-set-stainless-marmer-mewah.jpg'),
+  },
+  {
+    title: 'Rak Piring Tarik 2-Tier Stainless Steel',
+    kitchenType: 'konvensional',
+    category: 'Rak & Storage',
+    desc: 'Sistem rak pengering piring, mangkuk, dan gelas tarik 2 tingkat berbahan stainless steel food grade. Dipasang tersembunyi di dalam kabinet bawah dengan rel geser halus (soft-closing drawer runner).',
+    specs: ['SUS 304 Kawat Tebal Kokoh', '2-Tier Kompartemen Piring & Gelas', 'Soft-Close Heavy Duty Runner', 'Tray Penampung Tetesan Air'],
+    suitableFor: 'Dapur Residensial, Pantry Hunian, Dapur Konvensional',
+    image: getAssetUrl('/katalog-produk-kitchenset/rak-piring-tarik-stainless.jpg'),
+  },
+  {
+    title: 'Laci Sendok Organizer Full Stainless Steel',
+    kitchenType: 'konvensional',
+    category: 'Meja & Prep',
+    desc: 'Laci penyimpanan alat makan kustom berbahan full stainless steel dengan sekat sendok garpu higienis. Struktur laci kokoh anti melengkung dengan rel bantalan bola hidrolik halus.',
+    specs: ['Box Laci Full Stainless SUS 304', 'Custom Cutlery Divider Compartment', 'Hydraulic Soft-Close Slider', 'Kapasitas Beban Laci 35kg'],
+    suitableFor: 'Dapur Hunian Modern, Kitchen Set Rumah Mewah',
+    image: getAssetUrl('/katalog-produk-kitchenset/laci-sendok-stainless-organizer.jpg'),
+  },
+  {
+    title: 'Kabinet Bawah Sudut Stainless Steel Custom',
+    kitchenType: 'konvensional',
+    category: 'Meja & Prep',
+    desc: 'Kabinet bawah dapur sudut (L-shape) full stainless steel dengan ambalan 2 tingkat. Memaksimalkan sudut mati dapur hunian untuk penyimpanan panci dan peralatan masak agar rapi dan bebas lembap.',
+    specs: ['SUS 304 Tebal 1.2mm Food Grade', 'Ambalan Rak 2 Tingkat Kokoh', 'Pintu Sudut Bukaan Lebar', 'Anti Tikus, Rayap & Jamur'],
+    suitableFor: 'Dapur L-Shape Hunian, Dapur Rumah Tinggal & Villa',
+    image: getAssetUrl('/katalog-produk-kitchenset/kabinet-sudut-stainless-storage.jpg'),
+  },
+  {
     title: 'Single Sink Big Bowl Minimalist',
     kitchenType: 'konvensional',
     category: 'Sink & Washing',

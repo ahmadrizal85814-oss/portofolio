@@ -31,6 +31,22 @@ const projects: ProjectItem[] = [
     image: getAssetUrl('/Display/pemasangan-kitchen-sesuai-request.jpeg'),
   },
   {
+    title: 'Pemasangan Kitchen Set Residensial Top Marmer Mewah',
+    category: 'Dapur Residensial & Konvensional',
+    type: 'Dapur Konvensional',
+    desc: 'Instalasi kitchen set mewah di hunian pribadi dengan kombinasi top table marmer onyx dan kabinet bawah full stainless steel SUS 304 hairline finish. 100% anti rayap, anti jamur, dan awet seumur hidup.',
+    specs: ['Top Table Marmer Onyx Mewah', 'Kabinet Bawah Full SUS 304', '100% Bebas Rayap & Jamur', 'Engsel Soft-Close Hydraulic'],
+    image: getAssetUrl('/Display/pemasangan-kitchen-marmer-stainless.jpg'),
+  },
+  {
+    title: 'Pemasangan Rak Piring Tarik & Organizer Stainless',
+    category: 'Dapur Residensial & Konvensional',
+    type: 'Dapur Konvensional',
+    desc: 'Pemasangan sistem rak piring tarik 2 tingkat dan laci sekat sendok garpu stainless steel terintegrasi di dalam kabinet dapur bawah hunian.',
+    specs: ['Rak Piring 2-Tier Stainless', 'Laci Sendok Sekat Kustom', 'Rel Geser Hidrolik Halus', 'Higienis & Rapi'],
+    image: getAssetUrl('/Display/rak-piring-tarik-stainless.jpg'),
+  },
+  {
     title: 'Pemasangan Kitchen Set Residensial & Villa',
     category: 'Dapur Residensial & Konvensional',
     type: 'Dapur Konvensional',
