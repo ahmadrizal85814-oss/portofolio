@@ -30,9 +30,15 @@ export default function AdminDashboard() {
     setViews(getPageViews())
   }
 
+  const DEFAULT_PIN = '10124070'
+
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
-    const storedPin = localStorage.getItem('bse_admin_pin') || '2076'
+    let storedPin = localStorage.getItem('bse_admin_pin')
+    if (!storedPin || storedPin === '2076') {
+      storedPin = DEFAULT_PIN
+      localStorage.setItem('bse_admin_pin', DEFAULT_PIN)
+    }
     if (pinInput === storedPin) {
       sessionStorage.setItem('bse_admin_logged', 'true')
       setIsAuthenticated(true)
@@ -185,13 +191,13 @@ export default function AdminDashboard() {
               <input
                 id="admin-pin"
                 type="password"
-                maxLength={8}
+                maxLength={16}
                 value={pinInput}
                 onChange={(e) => {
                   setPinInput(e.target.value)
                   setPinError(false)
                 }}
-                placeholder="PIN Default: 2076"
+                placeholder="••••••••"
                 className={`w-full text-center text-2xl tracking-widest bg-cream-dark/60 border rounded-xl py-3 px-4 text-charcoal font-mono focus:outline-none focus:ring-2 transition-all ${
                   pinError
                     ? 'border-red-500 focus:ring-red-400 bg-red-50 text-red-700'
@@ -201,7 +207,7 @@ export default function AdminDashboard() {
               />
               {pinError && (
                 <p className="text-xs text-red-600 mt-2 text-center font-medium">
-                  ⚠️ PIN salah. Silakan coba lagi (PIN bawaan: 2076).
+                  ⚠️ PIN tidak sesuai. Silakan coba lagi.
                 </p>
               )}
             </div>
@@ -673,10 +679,10 @@ export default function AdminDashboard() {
             <form onSubmit={handleChangePin} className="flex flex-col gap-4">
               <input
                 type="password"
-                maxLength={8}
+                maxLength={16}
                 value={newPin}
                 onChange={(e) => setNewPin(e.target.value)}
-                placeholder="PIN Baru (contoh: 2076)"
+                placeholder="Masukkan PIN Baru"
                 className="w-full text-center text-xl tracking-widest bg-cream-dark border border-charcoal/20 rounded-xl py-3 px-4 font-mono text-charcoal focus:outline-none focus:border-charcoal"
                 autoFocus
               />
