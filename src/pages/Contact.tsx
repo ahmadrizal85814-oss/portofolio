@@ -14,6 +14,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    handleSendViaWhatsApp()
     setSubmitted(true)
   }
 
@@ -75,15 +76,24 @@ export default function Contact() {
                     Pesan Berhasil Terkirim!
                   </h3>
                   <p className="text-warm-gray text-xs sm:text-sm max-w-md mx-auto mb-6">
-                    Terima kasih telah menghubungi Bina Sekawan Engineering. Tim kami akan segera meninjau pesan Anda dan menghubungi nomor atau email yang tertera.
+                    Terima kasih telah menghubungi Bina Sekawan Engineering. Formulir Anda sudah kami catat dan diarahkan ke WhatsApp resmi kami.
                   </p>
-                  <button
-                    type="button"
-                    onClick={() => setSubmitted(false)}
-                    className="px-5 py-2.5 bg-charcoal text-cream text-xs font-semibold rounded-md hover:bg-charcoal-light"
-                  >
-                    Kirim Pesan Lain
-                  </button>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5">
+                    <button
+                      type="button"
+                      onClick={handleSendViaWhatsApp}
+                      className="w-full sm:w-auto px-5 py-2.5 bg-emerald-700 text-cream text-xs font-semibold rounded-md hover:bg-emerald-800 transition-colors flex items-center justify-center gap-1.5"
+                    >
+                      <span>💬 Buka Chat WhatsApp</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setSubmitted(false)}
+                      className="w-full sm:w-auto px-5 py-2.5 bg-charcoal/10 text-charcoal text-xs font-semibold rounded-md hover:bg-charcoal/20 transition-colors"
+                    >
+                      Kirim Pesan Lain
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-5">
