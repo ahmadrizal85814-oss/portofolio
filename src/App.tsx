@@ -10,12 +10,18 @@ import SteelProjects from './pages/SteelProjects'
 import Contact from './pages/Contact'
 import Display from './pages/Display'
 
+import AdminDashboard from './pages/AdminDashboard'
+
 function App() {
   const baseUrl = import.meta.env.BASE_URL === './' || import.meta.env.BASE_URL === '.' ? '/' : import.meta.env.BASE_URL
 
   return (
     <BrowserRouter basename={baseUrl}>
       <Routes>
+        {/* Dedicated Admin Portal Route */}
+        <Route path="/admin" element={<AdminDashboard />} />
+
+        {/* Public Website Routes */}
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

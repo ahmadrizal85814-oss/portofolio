@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { getAssetUrl } from '../utils/asset'
+import { trackWaClick } from '../utils/tracker'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,15 @@ export default function Contact() {
   }
 
   const handleSendViaWhatsApp = () => {
+    trackWaClick({
+      sourcePage: '/contact',
+      productName: `Formulir Kontak: ${formData.project_type}`,
+      category: formData.project_type,
+      clientName: formData.name,
+      clientPhone: formData.phone,
+      notes: formData.message
+    })
+
     const text = encodeURIComponent(
       `Halo Bina Sekawan Engineering, perkenalkan saya ${formData.name || 'Klien'}.\nSaya ingin konsultasi mengenai:\n- Kategori: ${formData.project_type}\n- Kontak: ${formData.phone || formData.email || '-'}\n- Detail Kebutuhan: ${formData.message || 'Mohon info produk dan jadwal survei lokasi.'}`
     )
@@ -236,6 +246,15 @@ export default function Contact() {
                         href={s.url}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => {
+                          if (s.name.includes('WhatsApp')) {
+                            trackWaClick({
+                              sourcePage: '/contact',
+                              productName: 'WhatsApp Official Card Kontak',
+                              category: 'Kontak Langsung'
+                            })
+                          }
+                        }}
                         className="flex items-center gap-3 p-3 sm:p-3.5 bg-cream-dark/50 border border-charcoal/10 rounded-xl hover:border-charcoal/30 active:bg-cream-dark transition-all group"
                       >
                         <img

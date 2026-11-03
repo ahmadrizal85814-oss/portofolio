@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { getAssetUrl } from '../utils/asset'
+import { trackWaClick } from '../utils/tracker'
 
 export type KitchenType = 'all' | 'resto' | 'konvensional'
 
@@ -406,6 +407,13 @@ export default function Products() {
                 href="https://wa.me/6282260802076?text=Halo%20Bina%20Sekawan%20Engineering,%20saya%20ingin%20konsultasi%20pembuatan%20Dapur%20Resto%20Komersial."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() =>
+                  trackWaClick({
+                    sourcePage: '/products',
+                    productName: 'Banner Banner Dapur Resto',
+                    category: 'Dapur Restoran (Komersial)'
+                  })
+                }
                 className="w-full sm:w-auto text-center whitespace-nowrap px-4 py-2.5 bg-charcoal text-cream text-xs font-semibold rounded hover:bg-charcoal-light transition-colors"
               >
                 Konsultasi Layout Resto &rarr;
@@ -428,6 +436,13 @@ export default function Products() {
                 href="https://wa.me/6282260802076?text=Halo%20Bina%20Sekawan%20Engineering,%20saya%20ingin%20konsultasi%20kitchen%20set%20stainless%20dapur%20rumah/residensial."
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() =>
+                  trackWaClick({
+                    sourcePage: '/products',
+                    productName: 'Banner Dapur Rumah',
+                    category: 'Dapur Konvensional (Rumah)'
+                  })
+                }
                 className="w-full sm:w-auto text-center whitespace-nowrap px-4 py-2.5 bg-amber-900 text-cream text-xs font-semibold rounded hover:bg-amber-950 transition-colors"
               >
                 Konsultasi Kitchen Rumah &rarr;
@@ -547,6 +562,13 @@ export default function Products() {
                         )}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() =>
+                          trackWaClick({
+                            sourcePage: '/products',
+                            productName: product.title,
+                            category: isResto ? 'Dapur Restoran' : 'Dapur Konvensional'
+                          })
+                        }
                         className="flex-1 py-2.5 bg-charcoal text-cream text-xs font-semibold rounded-md hover:bg-charcoal-light active:scale-98 transition-all text-center flex items-center justify-center gap-1.5 min-h-[42px]"
                       >
                         <span>WA Tanya</span>
@@ -744,6 +766,13 @@ export default function Products() {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() =>
+                    trackWaClick({
+                      sourcePage: '/products',
+                      productName: selectedProduct.title,
+                      category: selectedProduct.kitchenType === 'resto' ? 'Dapur Restoran' : 'Dapur Konvensional'
+                    })
+                  }
                   className="flex-1 py-3 bg-charcoal text-cream text-xs font-semibold rounded-md hover:bg-charcoal-light active:scale-98 transition-all text-center flex items-center justify-center gap-1.5"
                 >
                   <span>Hubungi WA</span>
@@ -778,6 +807,13 @@ export default function Products() {
               href="https://wa.me/6282260802076?text=Halo%20Bina%20Sekawan%20Engineering,%20saya%20ingin%20jadwalkan%20survei%20lokasi%20dapur."
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackWaClick({
+                  sourcePage: '/products',
+                  productName: 'Jadwalkan Survei Lokasi Dapur (Bottom CTA)',
+                  category: 'Survei Lokasi'
+                })
+              }
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-charcoal/20 text-charcoal text-xs sm:text-sm font-medium tracking-wide active:bg-cream-dark transition-all rounded-md"
             >
               <span>Jadwalkan Survei Lokasi</span>

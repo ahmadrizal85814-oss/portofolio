@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getAssetUrl } from '../utils/asset'
+import { trackWaClick } from '../utils/tracker'
 
 interface ProjectItem {
   title: string
@@ -167,6 +168,13 @@ export default function Display() {
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() =>
+                      trackWaClick({
+                        sourcePage: '/display',
+                        productName: project.title,
+                        category: `Display & Interior (${project.category})`
+                      })
+                    }
                     className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 bg-charcoal text-cream text-xs font-semibold rounded-md hover:bg-charcoal-light active:scale-98 transition-all min-h-[42px]"
                   >
                     <span>Konsultasi Proyek Ini</span>

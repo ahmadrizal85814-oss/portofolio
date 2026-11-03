@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getAssetUrl } from '../utils/asset'
+import { trackWaClick } from '../utils/tracker'
 
 interface FurnitureItem {
   title: string
@@ -145,6 +146,13 @@ export default function Furniture() {
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() =>
+                      trackWaClick({
+                        sourcePage: '/furniture',
+                        productName: product.title,
+                        category: `Furniture (${product.category})`
+                      })
+                    }
                     className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 bg-charcoal text-cream text-xs font-semibold rounded-md hover:bg-charcoal-light active:scale-98 transition-all min-h-[42px]"
                   >
                     <span>Pesan / Tanya via WA</span>
@@ -177,6 +185,13 @@ export default function Furniture() {
               href="https://wa.me/6282260802076?text=Halo%20Bina%20Sekawan%20Engineering,%20saya%20punya%20desain%20furniture%20custom%20yang%20ingin%20dibuatkan."
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackWaClick({
+                  sourcePage: '/furniture',
+                  productName: 'Diskusi Desain Furniture Sendiri (CTA)',
+                  category: 'Furniture Custom'
+                })
+              }
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-charcoal/20 text-charcoal text-xs sm:text-sm font-medium tracking-wide active:bg-cream-dark transition-all rounded-md"
             >
               <span>Diskusi via WhatsApp</span>

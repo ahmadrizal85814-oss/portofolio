@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { trackWaClick } from '../utils/tracker'
 
 const services = [
   {
@@ -233,6 +234,13 @@ export default function Services() {
               href="https://wa.me/6282260802076?text=Halo%20Bina%20Sekawan%20Engineering,%20saya%20ingin%20konsultasi%20layanan%20kitchen/baja."
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackWaClick({
+                  sourcePage: '/services',
+                  productName: 'Konsultasi Layanan Kitchen & Baja (CTA)',
+                  category: 'Layanan Pabrikasi'
+                })
+              }
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-charcoal/20 text-charcoal text-xs sm:text-sm font-medium tracking-wide active:bg-cream-dark transition-all rounded-md"
             >
               <span>WhatsApp Cepat</span>

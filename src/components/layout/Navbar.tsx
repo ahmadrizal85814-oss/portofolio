@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { getAssetUrl } from '../../utils/asset'
+import { trackWaClick } from '../../utils/tracker'
 
 const navLinks = [
   { to: '/', label: 'Beranda' },
@@ -86,6 +87,13 @@ export default function Navbar() {
             href="https://wa.me/6282260802076?text=Halo%20Bina%20Sekawan%20Engineering,%20saya%20ingin%20konsultasi%20mengenai%20proyek%20custom."
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() =>
+              trackWaClick({
+                sourcePage: pathname,
+                productName: 'Navbar Desktop Button',
+                category: 'Umum'
+              })
+            }
             className="ml-2 inline-flex items-center gap-1.5 px-3.5 py-2 bg-charcoal text-cream text-xs font-medium rounded-sm hover:bg-charcoal-light transition-all shadow-xs"
           >
             <span>Konsultasi WA</span>
@@ -99,6 +107,13 @@ export default function Navbar() {
             href="https://wa.me/6282260802076"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() =>
+              trackWaClick({
+                sourcePage: pathname,
+                productName: 'Navbar Mobile Top Button',
+                category: 'Umum'
+              })
+            }
             className="px-2.5 sm:px-3 py-1.5 bg-charcoal text-cream text-[11px] sm:text-xs font-medium rounded-sm flex items-center gap-1"
           >
             <span>WA</span>
@@ -160,6 +175,13 @@ export default function Navbar() {
             href="https://wa.me/6282260802076"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() =>
+              trackWaClick({
+                sourcePage: pathname,
+                productName: 'Navbar Mobile Drawer Button',
+                category: 'Umum'
+              })
+            }
             className="flex items-center justify-center gap-2 w-full py-3 bg-charcoal text-cream text-xs font-medium rounded-md shadow-sm active:scale-98 transition-transform"
           >
             <span>💬 Hubungi Tim Kami (0822-6080-2076)</span>

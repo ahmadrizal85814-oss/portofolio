@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { getAssetUrl } from '../../utils/asset'
+import { trackWaClick } from '../../utils/tracker'
 
 export default function Footer() {
   return (
@@ -80,7 +81,19 @@ export default function Footer() {
             <ul className="flex flex-col gap-2.5 text-xs text-cream/70">
               <li>
                 <strong className="text-cream block">Telepon / WhatsApp:</strong>
-                <a href="https://wa.me/6282260802076" target="_blank" rel="noopener noreferrer" className="hover:text-cream underline">
+                <a
+                  href="https://wa.me/6282260802076"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    trackWaClick({
+                      sourcePage: 'footer',
+                      productName: 'Footer WhatsApp Phone Link',
+                      category: 'Kontak Langsung'
+                    })
+                  }
+                  className="hover:text-cream underline"
+                >
                   0822-6080-2076
                 </a>
               </li>
@@ -98,9 +111,17 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-cream/10 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-          <p className="text-xs text-cream/50">
-            &copy; {new Date().getFullYear()} Bina Sekawan Engineering. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs text-cream/50">
+            <p>&copy; {new Date().getFullYear()} Bina Sekawan Engineering. All rights reserved.</p>
+            <span className="hidden sm:inline text-cream/20">&bull;</span>
+            <Link
+              to="/admin"
+              className="text-[11px] text-cream/40 hover:text-cream/80 transition-colors underline-offset-2 hover:underline"
+              title="Dashboard Pengunjung & Leads"
+            >
+              🔐 Portal Admin
+            </Link>
+          </div>
           <div className="flex flex-wrap gap-4 sm:gap-5 items-center justify-center">
             {[
               { name: 'WhatsApp', url: 'https://wa.me/6282260802076', icon: getAssetUrl('/cikon.sosmed/icon-web/whatsap.png') },
@@ -112,6 +133,15 @@ export default function Footer() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  if (social.name.includes('WhatsApp')) {
+                    trackWaClick({
+                      sourcePage: 'footer',
+                      productName: 'Footer Social WhatsApp',
+                      category: 'Kontak Langsung'
+                    })
+                  }
+                }}
                 className="flex items-center gap-2 text-xs text-cream/70 hover:text-cream transition-all group p-1"
               >
                 <img

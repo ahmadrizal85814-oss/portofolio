@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getAssetUrl } from '../utils/asset'
+import { trackWaClick } from '../utils/tracker'
 
 interface SteelItem {
   title: string
@@ -152,6 +153,13 @@ export default function SteelProjects() {
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() =>
+                      trackWaClick({
+                        sourcePage: '/steel-projects',
+                        productName: project.title,
+                        category: `Proyek Baja (${project.category})`
+                      })
+                    }
                     className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 bg-charcoal text-cream text-xs font-semibold rounded-md hover:bg-charcoal-light active:scale-98 transition-all min-h-[42px]"
                   >
                     <span>Konsultasi Proyek Baja</span>
@@ -184,6 +192,13 @@ export default function SteelProjects() {
               href="https://wa.me/6282260802076?text=Halo%20Bina%20Sekawan%20Engineering,%20saya%20butuh%20survei%20lapangan%20untuk%20proyek%20baja."
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackWaClick({
+                  sourcePage: '/steel-projects',
+                  productName: 'Survei Lapangan Proyek Baja (CTA)',
+                  category: 'Proyek Baja'
+                })
+              }
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-charcoal/20 text-charcoal text-xs sm:text-sm font-medium tracking-wide active:bg-cream-dark transition-all rounded-md"
             >
               <span>Hubungi via WhatsApp</span>
